@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="SEAN.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+
+        <!-- Add Student Form -->
+        <div class="form-container">
+            <h2>Add Student</h2>
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="email" id="email" placeholder="Email">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <!-- Add Subject Form -->
+        <div class="form-container">
+            <h2>Add Subject</h2>
+            <input type="text" id="subjectCode" placeholder="Subject Code">
+            <input type="text" id="subjectDescription" placeholder="Subject Description">
+            <button onclick="addSubject()">Add Subject</button>
+        </div>
+
+        <!-- Add Section Form -->
+        <div class="form-container">
+            <h2>Add Section</h2>
+            <input type="text" id="sectionName" placeholder="Section Name">
+            <input type="number" id="subjectId" placeholder="Subject ID">
+            <button onclick="addSection()">Add Section</button>
+        </div>
+
+        <!-- Enroll Student Form -->
+        <div class="form-container">
+            <h2>Enroll Student</h2>
+            <input type="number" id="studentId" placeholder="Student ID">
+            <input type="number" id="sectionId" placeholder="Section ID">
+            <button onclick="enrollStudent()">Enroll</button>
+            <!-- Add this inside the <body> tag, below other forms -->
+
+<button class="view-records-btn" onclick="window.location.href='records.html'">View Records</button>
+
+
+            <!-- Enrolled Students List -->
+            <div class="list-container">
+                <h3>Enrolled Students</h3>
+                <ul id="studentList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="DIAZ.js"></script>
+</body>
+</html>

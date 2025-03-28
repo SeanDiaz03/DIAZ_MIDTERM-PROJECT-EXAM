@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="SEAN.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Enrolled Student Records</h1>
+        <ul id="recordsList"></ul>
+        <button class="view-records-btn" onclick="window.location.href='SEAN.html'">Go Back</button>
+    </div>
+    
+    <script>
+        
+        function displayRecords() {
+            let recordsList = document.getElementById("recordsList");
+            let students = JSON.parse(localStorage.getItem("students")) || [];
+            recordsList.innerHTML = "";
+
+            students.forEach(student => {
+                let li = document.createElement("li");
+                li.innerHTML = `<strong>${student.name}</strong> - ID: ${student.id}, Section: ${student.section}, Subject: ${student.subject}`;
+                recordsList.appendChild(li);
+                
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", displayRecords);
+    </script>
+</body>
+</html>
